@@ -46,3 +46,9 @@ C:\Users\DELL\Desktop\jameela_emp\EmployeeManagement\bin\Debug\nunit.engine.core
 C:\Users\DELL\Desktop\jameela_emp\EmployeeManagement\bin\Debug\testcentric.engine.metadata.dll
 C:\Users\DELL\Desktop\jameela_emp\EmployeeManagement\bin\Debug\nunit.framework.dll
 C:\Users\DELL\Desktop\jameela_emp\EmployeeManagement\bin\Debug\nunit.framework.xml
+C:\Users\DELL\Desktop\jameela_emp\EmployeeManagement\bin\Debug\xunit.abstractions.dll
+C:\Users\DELL\Desktop\jameela_emp\EmployeeManagement\bin\Debug\xunit.core.dll
+C:\Users\DELL\Desktop\jameela_emp\EmployeeManagement\bin\Debug\xunit.execution.desktop.dll
+C:\Users\DELL\Desktop\jameela_emp\EmployeeManagement\bin\Debug\xunit.abstractions.xml
+C:\Users\DELL\Desktop\jameela_emp\EmployeeManagement\bin\Debug\xunit.core.xml
+C:\Users\DELL\Desktop\jameela_emp\EmployeeManagement\bin\Debug\xunit.execution.desktop.xml

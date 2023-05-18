@@ -486,6 +486,15 @@
             "rid": "win"
           }
         }
+      },
+      "EmployeeManagement/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/EmployeeManagement.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EmployeeManagement.dll": {}
+        }
       }
     }
   },
@@ -1247,10 +1256,16 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "EmployeeManagement/1.0.0": {
+      "type": "project",
+      "path": "../EmployeeManagement/EmployeeManagement.csproj",
+      "msbuildProject": "../EmployeeManagement/EmployeeManagement.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "EmployeeManagement >= 1.0.0",
       "FluentAssertions >= 6.11.0",
       "Microsoft.NET.Test.Sdk >= 17.5.0",
       "Moq >= 4.18.4",
@@ -1286,7 +1301,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\DELL\\Desktop\\jameela_emp\\EmployeeManagement\\EmployeeManagement.csproj": {
+              "projectPath": "C:\\Users\\DELL\\Desktop\\jameela_emp\\EmployeeManagement\\EmployeeManagement.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

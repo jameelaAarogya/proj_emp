@@ -1,13 +1,19 @@
-﻿namespace EmployeeTest
+﻿using EmployeeTest.Services;
+
+namespace EmployeeTest
 {
     public  interface IRestApiClient
     {
+        Task PutAsync(string v, Employee employee);
+        Task PutAsync(string v, StringContent content);
+
         public interface IRestApiClient
         {
-            Task<TResponse> GetAsync<TResponse>(string url);
-            Task<TResponse> PostAsync<TResponse>(string url, object data);
-            Task<TResponse> PutAsync<TResponse>(string url, object data);
-            Task<bool> DeleteAsync(string url);
+            Task<bool> UpdateEmployeeAsync(Employee employee);
+            Task<bool> DeleteEmployeeAsync(int employeeId);
+
+
+            Task<List<Employee>> GetEmployeesAsync();
         }
 
     }

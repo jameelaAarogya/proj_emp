@@ -1,8 +1,7 @@
 using EmployeeTest.Services;
 using System.Net;
 using FluentAssertions;
-
-
+using System.Net.Http.Json;
 
 namespace EmployeeTest
 {
@@ -16,8 +15,10 @@ namespace EmployeeTest
         {
             var restApiClientMock = new Mock<IRestApiClient>();
             var employeeService = new EmployeeService();
-           // employeeService = new EmployeeService(restApiClientMock.Object);
-        }
+            // employeeService = new EmployeeService(restApiClientMock.Object);
+        }     
+             
+               
         public class TestHttpClientHandler : HttpMessageHandler
         {
             protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
@@ -55,30 +56,35 @@ namespace EmployeeTest
             {
                 Id = 1,
                 Name = "John Doe",
-                Email = "john.doe@example.com"
+                Email = "john.doe@example.com",
+                Gender ="Male",
+                Status ="Inactive"
             };
 
             var updatedEmployee = new Employee
             {
                 Id = 1,
                 Name = "John Smith",
-                Email = "john.smith@example.com"
+                Email = "john.smith@example.com",
+                Gender = "Male",
+                Status = "Inactive"
             };
 
-            EmployeeService employeeService = new EmployeeService();            
-            var employees = employeeService.GetEmployees().Result;
+            EmployeeService employeeService = new EmployeeService();
+            
+            var employees = employeeService.GetEmployees().Result;            
             Assert.IsNotNull(employees);
             if (employees.Count > 0)
             {
                 Assert.IsTrue(employees.Count > 0);
             }
-        }
+        }       
 
         [Test]
         public async Task DeleteEmployee_ValidId_ReturnsTrue()
         {
             EmployeeService employeeService = new EmployeeService();
-            var employees = employeeService.GetEmployees().Result;
+            var employees = employeeService.GetEmployees().Result;           
             Assert.IsNotNull(employees);
             if (employees.Count > 0)
             {
